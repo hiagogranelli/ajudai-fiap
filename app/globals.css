@@ -1,0 +1,245 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 0 0% 100%;
+    --foreground: 222.2 84% 4.9%;
+
+    --card: 0 0% 100%;
+    --card-foreground: 222.2 84% 4.9%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 222.2 84% 4.9%;
+
+    --primary: 222.2 47.4% 11.2%;
+    --primary-foreground: 210 40% 98%;
+
+    --secondary: 210 40% 96.1%;
+    --secondary-foreground: 222.2 47.4% 11.2%;
+
+    --muted: 210 40% 96.1%;
+    --muted-foreground: 215.4 16.3% 46.9%;
+
+    --accent: 210 40% 96.1%;
+    --accent-foreground: 222.2 47.4% 11.2%;
+
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 210 40% 98%;
+
+    --border: 214.3 31.8% 91.4%;
+    --input: 214.3 31.8% 91.4%;
+    --ring: 222.2 84% 4.9%;
+
+    --radius: 0.5rem;
+  }
+
+  .dark {
+    --background: 222.2 84% 4.9%;
+    --foreground: 210 40% 98%;
+
+    --card: 222.2 84% 4.9%;
+    --card-foreground: 210 40% 98%;
+
+    --popover: 222.2 84% 4.9%;
+    --popover-foreground: 210 40% 98%;
+
+    --primary: 210 40% 98%;
+    --primary-foreground: 222.2 47.4% 11.2%;
+
+    --secondary: 217.2 32.6% 17.5%;
+    --secondary-foreground: 210 40% 98%;
+
+    --muted: 217.2 32.6% 17.5%;
+    --muted-foreground: 215 20.2% 65.1%;
+
+    --accent: 217.2 32.6% 17.5%;
+    --accent-foreground: 210 40% 98%;
+
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 210 40% 98%;
+
+    --border: 217.2 32.6% 17.5%;
+    --input: 217.2 32.6% 17.5%;
+    --ring: 212.7 26.8% 83.9%;
+  }
+}
+
+/* Calendar Custom Styles */
+.calendar-custom {
+  width: 100%;
+  border: none !important;
+}
+
+.calendar-custom .rdp-months {
+  justify-content: center;
+}
+
+.calendar-custom .rdp-month {
+  width: 100%;
+  max-width: none;
+}
+
+.calendar-custom .rdp-caption {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1rem;
+  text-transform: lowercase;
+}
+
+.calendar-custom .rdp-nav {
+  position: absolute;
+  left: 0;
+  right: 0;
+  display: flex;
+  justify-content: space-between;
+  padding: 0 1rem;
+}
+
+.calendar-custom .rdp-nav_button {
+  color: #374151;
+  padding: 0;
+  margin: 0;
+  background: none;
+}
+
+.calendar-custom .rdp-nav_button:hover {
+  background: none;
+  opacity: 0.7;
+}
+
+.calendar-custom .rdp-head_cell {
+  font-weight: normal;
+  font-size: 0.875rem;
+  color: #374151 !important;
+  text-transform: lowercase;
+  padding: 0.5rem;
+}
+
+.calendar-custom .rdp-cell {
+  padding: 0.5rem;
+  text-align: center;
+}
+
+.calendar-custom .rdp-button {
+  font-size: 0.875rem;
+  color: #374151;
+  padding: 0.5rem;
+  border-radius: 0;
+  background: none;
+  width: 2rem;
+  height: 2rem;
+  margin: 0 auto;
+}
+
+.calendar-custom .rdp-button:hover {
+  background: none;
+  color: #2b5329;
+}
+
+.calendar-custom .rdp-day_selected {
+  background: none !important;
+  color: #2b5329 !important;
+  font-weight: bold;
+}
+
+.calendar-custom .rdp-day_today {
+  font-weight: bold;
+}
+
+.calendar-custom .rdp-day_outside {
+  opacity: 0.5;
+}
+
+.calendar-custom table {
+  margin: 0;
+  width: 100%;
+}
+
+/* Calendar Styles */
+.rdp {
+  --rdp-cell-size: 40px;
+  --rdp-accent-color: #2b5329;
+  --rdp-background-color: #e5e7eb;
+  margin: 0;
+}
+
+.rdp-months {
+  justify-content: center;
+}
+
+.rdp-month {
+  background-color: white;
+  border-radius: 6px;
+  width: 100%;
+}
+
+.rdp-caption {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0;
+  text-transform: capitalize;
+}
+
+.rdp-nav {
+  position: relative;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  padding: 0 1rem;
+}
+
+.rdp-nav_button {
+  width: 28px;
+  height: 28px;
+  padding: 4px;
+  border-radius: 4px;
+  color: #2b5329;
+}
+
+.rdp-nav_button:hover {
+  background-color: var(--rdp-background-color);
+}
+
+.rdp-head_cell {
+  font-weight: 600 !important;
+  color: #2b5329 !important;
+  text-transform: lowercase;
+  font-size: 0.875rem;
+}
+
+.rdp-cell {
+  text-align: center;
+  padding: 0;
+  margin: 0;
+}
+
+.rdp-button {
+  width: 100%;
+  height: 100%;
+  padding: 8px;
+  border-radius: 4px;
+  color: #374151;
+}
+
+.rdp-button:hover:not([disabled]) {
+  background-color: var(--rdp-background-color);
+}
+
+.rdp-day_selected {
+  background-color: var(--rdp-accent-color) !important;
+  color: white !important;
+}
+
+.rdp-day_selected:hover {
+  background-color: var(--rdp-accent-color) !important;
+  opacity: 0.8;
+}
+
+.rdp-day_outside {
+  opacity: 0.4;
+}
+
