@@ -9,7 +9,7 @@ const slides = [
     title: "Conectando Solidariedade",
     description: "Encontre organizações que ajudam pessoas em situação de vulnerabilidade",
     image:
-      "https://sjc.microlink.io/ufMXK5r3zQTAnm6HQvkcOPJEBSO51-KIwjQbhx26mCAW-EWmhrmYaLBDqYW6681lEbNvoKYvv_tcecIcX8HvWw.jpeg",
+      "https://media.gettyimages.com/id/1498170916/photo/a-couple-is-taking-a-bag-of-food-at-the-food-and-clothes-bank.jpg?s=612x612&w=gi&k=20&c=OQXzpRYIt4_vr0b2tTz9Wsz8aCPi9FgUBwGSEeJaToM=",
   },
   // Add more slides as needed
 ]
@@ -38,9 +38,9 @@ export function HeroSlider() {
             backgroundPosition: "center",
           }}
         >
-          <div className="flex flex-col items-center justify-center h-full text-center text-white px-4">
-            <h1 className="text-4xl sm:text-6xl font-bold mb-4">{slide.title}</h1>
-            <p className="text-lg sm:text-xl mb-8 max-w-2xl">{slide.description}</p>
+          <div className="flex flex-col items-center justify-center h-full px-4 text-center text-white">
+            <h1 className="mb-4 text-4xl font-bold sm:text-6xl">{slide.title}</h1>
+            <p className="max-w-2xl mb-8 text-lg sm:text-xl">{slide.description}</p>
             <Button className="bg-[#FF5722] hover:bg-[#F4511E] text-white px-8 py-6 text-lg rounded-md">
               Quero Ajudar
             </Button>
@@ -50,19 +50,19 @@ export function HeroSlider() {
 
       <button
         onClick={() => setCurrentSlide((prev) => (prev - 1 + slides.length) % slides.length)}
-        className="absolute left-4 top-1/2 -translate-y-1/2 p-2 text-white"
+        className="absolute p-2 text-white -translate-y-1/2 left-4 top-1/2"
       >
         <ChevronLeft size={40} />
       </button>
 
       <button
         onClick={() => setCurrentSlide((prev) => (prev + 1) % slides.length)}
-        className="absolute right-4 top-1/2 -translate-y-1/2 p-2 text-white"
+        className="absolute p-2 text-white -translate-y-1/2 right-4 top-1/2"
       >
         <ChevronRight size={40} />
       </button>
 
-      <div className="absolute bottom-8 left-1/2 -translate-x-1/2 flex space-x-2">
+      <div className="absolute flex space-x-2 -translate-x-1/2 bottom-8 left-1/2">
         {slides.map((_, index) => (
           <button
             key={index}
